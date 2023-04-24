@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Payroll Form</title>
-    <link rel="stylesheet" href="../EmployeePayrollHTML/css/new_payroll_form.css">
+    
+    <link rel="stylesheet" href="css/new_payroll_form.css">
+
 </head>
 <body>
-    <!-- UC1 -->
     <header class="header-content header">
         <div class="logo-content">
-            <img src="../EmployeePayrollHTML/img/logo.png "width="43px" height="43px" alt="">
+            <img onclick="imgclicked()" src="img/logo.png"width="43px" height="43px" alt="">
             <div>
                 <span class="emp-text">EMPLOYEE</span><br>
                 <span class="emp-text emp-payroll">PAYROLL</span>
@@ -19,7 +20,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event);return false">
+        <form class="form" action="#" onreset="resetform()" onsubmit="save(event);return false">
             <div class="form-head">Employee Payroll Form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
@@ -29,26 +30,26 @@
                 <label class="label text"for="profile">Profile image </label>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" name="profile" id="profile1" value="../EmployeePayrollHTML/img/img1.png" required>
-                        <img class="profile" id="image1" src="../EmployeePayrollHTML/img/img1.png" width="50%" height="40px">
+                        <input type="radio" name="profile" id="profile1" value="img/img1.png" required>
+                        <img class="profile" id="image1" src="img/img1.png" width="50%" height="40px">
                     </label>
                 </div>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" name="profile" id="profile1" value="../EmployeePayrollHTML/img/img2.png" required>
-                        <img class="profile" id="image1" src="../EmployeePayrollHTML/img/img2.png" width="50%" height="40px">
+                        <input type="radio" name="profile" id="profile1" value="img/img2.png" required>
+                        <img class="profile" id="image1" src="img/img2.png" width="50%" height="40px">
                     </label>
                 </div>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" name="profile" id="profile1" value="../EmployeePayrollHTML/img/img3.jpg" required>
-                        <img class="profile" id="image1" src="../EmployeePayrollHTML/img/img3.jpg" width="50%" height="40px">
+                        <input type="radio" name="profile" id="profile1" value="img/img3.jpg" required>
+                        <img class="profile" id="image1" src="img/img3.jpg" width="50%" height="40px">
                     </label>
                 </div>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" name="profile" id="profile1" value="../EmployeePayrollHTML/img/img4.jpg" required>
-                        <img class="profile" id="image1" src="../EmployeePayrollHTML/img/img4.jpg" width="50%" height="40px">
+                        <input type="radio" name="profile" id="profile1" value="img/img4.jpg" required>
+                        <img class="profile" id="image1" src="img/img4.jpg" width="50%" height="40px">
                     </label>
                 </div>
             </div>
@@ -79,8 +80,9 @@
             <div class="row-content">
                 <label class="label text" for="salary">Choose your salary</label>
                 <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
-                <output class="salary-output text" for="salary">400000</output>
+                <output class="salary-output" for="salary">400000</output>
             </div>
+           
             <div class="row-content">
                 <label class="label text" for="startDate">Start Date</label>
                 <div>
@@ -146,16 +148,15 @@
                 <textarea class = "input" name="Notes" id="notes"placeholder="" style="height: 100px;"></textarea>
             </div>
             <div class="buttonParent">
-                <a href="../EmployeePayrollHTML/home.html" class="resetButton button cancelButton">Cancel</a>
+                <a href="./EmployeePayrollHTML/home.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                     <button type="reset" class="resetButton">Reset</button>
                 </div>
             </div>
-            
-
         </form>
-        
     </div>
+    <script type="text/javascript" src="./js/new_payroll_form.js"></script>
+    
 </body>
 </html>
