@@ -14,7 +14,7 @@ class EmployeeParollData{
             this._this=name;
         }
         else{
-            throw 'name is incorrect!';
+            throw 'name is incorrect! Please check your name';
         }
     }
 
